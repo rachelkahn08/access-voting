@@ -40,8 +40,8 @@ export default class Navigation extends Component {
 					},
 				],
 			},
-			'navClass': 'main-menu',
-			'hidden': false,
+			'navClass': 'greeting',
+			'hidden': true,
 		}
 
 		this.toggle = this.toggle.bind(this);
