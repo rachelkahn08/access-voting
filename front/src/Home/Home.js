@@ -11,40 +11,8 @@ export default class Home extends Component {
 			'register': false,
 		}
 
-		// this.confirmLogin = this.confirmLogin.bind(this);
-		// this.update = this.update.bind(this);
 		this.getHomePage = this.getHomePage.bind(this);
-		// this.changePage = this.changePage.bind(this);
-
-		// 
 	}
-
-	// update(unmount, user) {
-	// 	return new Promise((resolve, reject) => {
-	// 		this.
-	// 	// }).then(() => {
-	// 	// 	this.state.login ? (
-	// 	// 		this.setState({'user': user}), 
-	// 	// 		this.setState({'login': false})
-	// 	// 	: return
-	// 	// }).then(() => {
-
-	// 	})
-	// 	// this.setState({
-	// 	// 	[unmount]: false,
-	// 	// 	'user': {
-	// 	// 		'type': [user.type],
-	// 	// 		'name': [user.name],
-	// 	// 	}
-	// 	// });
-	// 	// .then(
-	// 	// 			this.props.login({
-	// 	// 				'login': false,
-	// 	// 				'name': this.state.user.name,
-	// 	// 				'type': this.state.user.type,
-	// 	// 			})
-	// 	// 		)
-	// }
 
 	getHomePage() {
 		return window.innerWidth > 800 ? <MobileWarning /> :

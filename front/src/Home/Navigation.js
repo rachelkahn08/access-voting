@@ -58,7 +58,7 @@ export default class Navigation extends Component {
 	// 	// }
 	// }
 	toggle() {
-		this.props.greeting ? null :
+		this.props.greeting ? this.props.update('greeting') :
 		this.state.hidden ? this.setState({ 
 			hidden: false, 
 			navClass: 'main-menu'
@@ -67,7 +67,7 @@ export default class Navigation extends Component {
 			navClass: 'main-menu hidden',
 		})
 	}
-
+	
 	render() {
 		const Navigation = () => {
 			const build = new QuickBuild;

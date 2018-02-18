@@ -25,7 +25,6 @@ export default class App extends Component {
   }
 
   update(unmount, user) { 
-    console.log('update');
     let update = Object.assign({}, this.state);
         update.homepage[unmount] = false;
         user ? update.user = user : null;
