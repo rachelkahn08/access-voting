@@ -1,0 +1,85 @@
+.greeting {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	text-align: center;
+	justify-content: stretch;
+	padding-top: 5vh;
+}
+
+.greeting.headers {
+	padding: 0;
+}
+
+.greeting h2, .greeting h3, .greeting .navlink {
+	margin: 0;
+	margin-bottom: 2.5vh;
+}
+
+.greeting h2 {
+	margin-top: 5vh;
+}
+
+.greeting .navlink {
+	border: 1px solid #121212;
+	border-radius: 5px;
+	width: 100%;
+	text-align: center;
+	padding: 2vh;
+	color: inherit;
+	text-decoration: none;
+}
+
+.main-menu {
+	position: fixed;
+	display: initial;
+	bottom: 50px;
+	left: 50px;
+	border-radius: 50%;
+	padding: 20px;
+	background-color: #121212;
+	transition: 0.2s;
+}
+
+.main-menu .navlink{
+	border-radius: 50%;
+	padding: 22.5px;
+	position: fixed;
+	background-color: #e4e4e4;
+}
+
+.main-menu .navlink:first-child {
+	bottom: 200px;
+	left: 41px;
+	transform: translate(0%, 86.5%);
+}
+
+.main-menu .navlink:last-child {
+	left: 196px;
+	bottom: 67px;
+	transform: translate(-86.5%, 0%);
+}
+
+.main-menu .navlink:nth-child(2) {
+	left: 102px;
+	bottom: 120.5px;
+	transform: translate(-21.5%, -60.5%);
+}
+
+.main-menu .navlink:nth-child(3) {
+	left: 106px;
+	bottom: 124px;
+	transform: translate(62.5%, 21.5%);
+}
+
+
+.main-menu.hidden {
+	bottom: 42.5px;
+	left: 42.5px;
+	padding: 30px;
+}
+
+.main-menu.hidden .navlink{
+	display: none;
+}
