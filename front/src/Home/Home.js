@@ -8,20 +8,15 @@ export default class Home extends Component {
 	constructor(props) {
 		super(props); 
 		this.state = {
-			'login': this.props.homepage.login,
-			'greeting': this.props.homepage.greeting,
+			'register': false,
 		}
 
 		// this.confirmLogin = this.confirmLogin.bind(this);
-		this.update = this.update.bind(this);
+		// this.update = this.update.bind(this);
 		this.getHomePage = this.getHomePage.bind(this);
 		// this.changePage = this.changePage.bind(this);
 
 		// 
-	}
-
-	update(unmount, user) {
-
 	}
 
 	// update(unmount, user) {
@@ -51,19 +46,15 @@ export default class Home extends Component {
 	// 	// 		)
 	// }
 
-	// changePage(unmount) {
-	// 	this.setState([unmount]: false);
-	// }
-
 	getHomePage() {
 		return window.innerWidth > 800 ? <MobileWarning /> :
-		this.props.login ? (
+		this.props.homepage.login ? (
 			<Login 
 				update={ this.props.update } 
 			/> 
 		) : this.state.register ? null : (
 			<Navigation 
-				greeting={ this.props.greeting } 
+				greeting={ this.props.homepage.greeting }
 				user={ this.props.user } 
 				update={ this.props.update } 
 			/>
@@ -72,6 +63,8 @@ export default class Home extends Component {
 		//use oauth
 		// check out node passport
 	}
+
+	
 
 	render() {
 		return this.getHomePage();

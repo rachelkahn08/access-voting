@@ -12,7 +12,6 @@ export default class Login extends Component {
 		}
 
 		this.sendLogin = this.sendLogin.bind(this);
-		this.update = this.props.update;
 		this.updateUser = this.updateUser.bind(this);
 	}
 
@@ -31,11 +30,8 @@ export default class Login extends Component {
 	}
 
 	updateUser(name, type) {
-		this.setState({'user': {
-				'name': name,
-				'type': type,
-			}
-		});
+		this.state.user.name = name;
+		this.state.user.type = type;
 	}
 
 	render() {

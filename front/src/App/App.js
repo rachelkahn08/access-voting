@@ -11,36 +11,29 @@ export default class App extends Component {
     super(props);
     this.state = {
       'user': {
-        'name': null,
-        'type': null,
+        'name': 'Buddy',
+        'type': 'driver',
       },
       'homepage': {
         'login': true,
-        'greeting': true,
+        'greeting': false,
       }
     }
 
+    this.update = this.update.bind(this);
     // will want a function to check if already logged in and update login status before loading
-    this.updateLogin = this.updateLogin.bind(this);
-    this.setHomepage = this.setHomepage.bind(this);
   }
 
-  // updateLogin({user}) {
-  //   this.setState({'login': false});
-  //   this.setState({'user': user});
-  // }
-
-  setHomepage(page, user) {
-    return new Promise(() => {
-      // console.log(page, user);
-      user ? this.setState({'user' : user }) : null;  
-    }).then(
-      this.setState({[page]: false})
-    )
+  update(unmount, user) { 
+    console.log('update');
+    let update = Object.assign({}, this.state);
+        update.homepage[unmount] = false;
+        user ? update.user = user : null;
+    this.setState(update);
   }
 
   render() {
-    
+
     const PropsRoute = ({component, ...rest}) => {
       let build = new QuickBuild;
           build = build.route({component, ...rest});
@@ -52,12 +45,12 @@ export default class App extends Component {
         <div className='app'>
           <Header />
           <Switch>
-            <PropsRoute  
-              user = { this.state.user }
-              update = { this.setHomepage } 
-              homepage = { this.state.homepage }
+            <PropsRoute exact path='/' 
               component = { Home }
-              exact path='/'/>
+              user = { this.state.user } 
+              homepage = { this.state.homepage }
+              update = { this.update }
+            />
           </Switch>
         </div>
       </BrowserRouter>

@@ -40,9 +40,8 @@ export default class Navigation extends Component {
 					},
 				],
 			},
-			'greeting': true,
+			'navClass': 'main-menu',
 			'hidden': false,
-			'navClass': 'greeting',
 		}
 
 		this.toggle = this.toggle.bind(this);
@@ -59,7 +58,7 @@ export default class Navigation extends Component {
 	// 	// }
 	// }
 	toggle() {
-		this.state.greeting ? null :
+		this.props.greeting ? null :
 		this.state.hidden ? this.setState({ 
 			hidden: false, 
 			navClass: 'main-menu'
@@ -77,7 +76,10 @@ export default class Navigation extends Component {
 				this.props.user.type == 'voter' ? this.state.maps.voter : 
 				null;
 			const user = this.props.user;
-			const greeting = this.state.greeting;
+			const greeting = this.props.greeting;
+			const clickFunction = this.props.greeting ? () => {
+				this.props.update('greeting');
+			} : this.toggle;
 
 			return (
 				<nav className={ this.state.navClass } onClick={ this.toggle }>
@@ -87,7 +89,7 @@ export default class Navigation extends Component {
 		}
 
 		const Greeting = () => {
-			return this.state.greeting ? (
+			return this.props.greeting ? (
 				<div className='greeting headers'>
 					<h2>Hi, {this.props.user.name}!</h2>
 					<h3>What would you like to do?</h3>
@@ -96,7 +98,7 @@ export default class Navigation extends Component {
 		}
 
 		const className = () => {
-			return this.state.greeting ? 'modal' : 'main-menu';
+			return this.props.greeting ? 'modal' : 'main-menu';
 		}
 
 		return (
