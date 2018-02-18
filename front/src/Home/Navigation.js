@@ -77,9 +77,6 @@ export default class Navigation extends Component {
 				null;
 			const user = this.props.user;
 			const greeting = this.props.greeting;
-			const clickFunction = this.props.greeting ? () => {
-				this.props.update('greeting');
-			} : this.toggle;
 
 			return (
 				<nav className={ this.state.navClass } onClick={ this.toggle }>
