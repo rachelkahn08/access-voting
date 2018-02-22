@@ -8,7 +8,6 @@ export default class Login extends Component {
 		this.state = {
 			'username': '',
 			'password': '',
-			'user': {},
 		}
 
 		this.sendLogin = this.sendLogin.bind(this);
@@ -21,17 +20,15 @@ export default class Login extends Component {
 
 	sendLogin(e) {
 		e.preventDefault();
-
-		return new Promise((resolve, reject) => {
-			this.updateUser('Buddy', 'driver');
-		}).then(
-			this.props.update('login', this.state.user)
-		)
+		const user = this.updateUser('Buddy', 'driver');
+		this.props.update('homepage', 'login', user);
 	}
 
 	updateUser(name, type) {
-		this.state.user.name = name;
-		this.state.user.type = type;
+		let user = Object.assign({}, this.state.user)
+			user.name = name;
+			user.type = type;
+		return user;
 	}
 
 	render() {

@@ -4,55 +4,98 @@
 	position: relative;
 	align-items: center;
 	text-align: center;
-	justify-content: stretch;
-	padding-top: 5vh;
+	justify-content: space-around;
+	/*padding-top: 5vh;*/
 }
 
 .greeting.headers {
 	padding: 0;
-}
-
-.greeting h2, .greeting h3, .greeting .navlink {
-	margin: 0;
-	margin-bottom: 2.5vh;
+	margin-bottom: 2vw;
 }
 
 .greeting h2 {
 	margin-top: 5vh;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+
+.greeting h3 {
+	font-weight: 300;
 }
 
 .greeting .navlink {
 	border: 1px solid #121212;
 	border-radius: 5px;
-	width: 100%;
+	width: stretch;
+	display: flex;
+	justify-content: center;
 	text-align: center;
 	padding: 2vh;
+	position: relative;
 	color: inherit;
 	text-decoration: none;
 }
 
+.greeting h3, .greeting .navlink {
+	margin-top: 0;
+	margin-bottom: 2.5vh;
+}
+
+
 .main-menu {
 	position: fixed;
+	z-index: 4;
 	display: initial;
+	transition: 0.2s;
+	left: 0;
+	bottom: 0;
+}
+
+.hamburger {
 	bottom: 50px;
 	left: 50px;
+	position: absolute;
 	border-radius: 50%;
 	padding: 20px;
-	background-color: #121212;
-	transition: 0.2s;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: -1px 1px 3px rgba(18, 18, 18, 0.2);
+	background-image: url(../img/minus.svg);
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center;
+}
+
+.hamburger, .main-menu .navlink {
+
 }
 
 .main-menu .navlink{
+	/*display: none;*/
+	/*pointer-events: none;*/
+	/*opacity: 1;*/
 	border-radius: 50%;
 	padding: 22.5px;
 	position: fixed;
-	background-color: #e4e4e4;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: -1px 1px 3px rgba(18, 18, 18, 0.5);
 }
 
-.main-menu .navlink:first-child {
+.main-menu .navlink:nth-child(2) {
 	bottom: 200px;
 	left: 41px;
 	transform: translate(0%, 86.5%);
+}
+
+.main-menu .navlink:nth-child(3) {
+	left: 102px;
+	bottom: 120.5px;
+	transform: translate(-21.5%, -60.5%);
+}
+
+.main-menu .navlink:nth-child(4) {
+	left: 106px;
+	bottom: 124px;
+	transform: translate(62.5%, 21.5%);
 }
 
 .main-menu .navlink:last-child {
@@ -61,25 +104,18 @@
 	transform: translate(-86.5%, 0%);
 }
 
-.main-menu .navlink:nth-child(2) {
-	left: 102px;
-	bottom: 120.5px;
-	transform: translate(-21.5%, -60.5%);
-}
-
-.main-menu .navlink:nth-child(3) {
-	left: 106px;
-	bottom: 124px;
-	transform: translate(62.5%, 21.5%);
-}
-
-
 .main-menu.hidden {
+	
+}
+
+.main-menu.hidden .hamburger {
+	padding: 30px;
 	bottom: 42.5px;
 	left: 42.5px;
-	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.8);
+	background-image: url(../img/hamburger.svg);
 }
 
 .main-menu.hidden .navlink{
-	display: none;
+	/*display: none;*/
 }

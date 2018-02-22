@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Navigation from './Navigation';
 import Login from './Login';            
 import MobileWarning from './MobileWarning';
-import QuickBuild from '../QuickBuild';
+
+// import QuickBuild from '../QuickBuild';
 
 export default class Home extends Component {
 	constructor(props) {
@@ -27,7 +28,7 @@ export default class Home extends Component {
 				update={ this.props.update } 
 			/>
 		);
-		//will need to return a registration page if false
+		// will need to return a registration page if false
 		//use oauth
 		// check out node passport
 	}

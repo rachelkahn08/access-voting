@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import QuickBuild from '../QuickBuild';
+
+import Greeting from './Greeting';
+import NavList from './NavList';
 
 import './_Navigation.css';
 
@@ -11,13 +13,13 @@ export default class Navigation extends Component {
 			'maps': {
 				'driver': [
 					{
-						'href': '/driver/availability',
+						'href': '/schedule/offers',
 						'text': 'Update My Availability',
 					},{
-						'href': '/driver/schedule',
+						'href': '/schedule',
 						'text': 'See My Driving Schedule',
 					},{
-						'href': '/calendar/requests',
+						'href': '/schedule/requests',
 						'text': 'Schedule or Cancel Rides',
 					},{
 						'href': '/on-call',
@@ -40,68 +42,44 @@ export default class Navigation extends Component {
 					},
 				],
 			},
-			'navClass': 'greeting',
-			'hidden': true,
+			'navClass': this.setNavClass(),
+			'containerClass': this.setContainerClass(),
 		}
 
-		this.toggle = this.toggle.bind(this);
+		this.setNavClass = this.setNavClass.bind(this);
+		this.setContainerClass = this.setContainerClass.bind(this);
+		
 	}
 
-	// 	// 	let className = ( this.props.hidden ) ? 'main-menu hidden' : 'main-menu';
-	// 	// 	let toggle = () => { this.props.clear(this.props.type) }
+	setNavClass() {
+		return this.props.greeting ? 
+			null : 'main-menu hidden';
+	}
 
-	// 	// 	return (
-	// 	// 		<nav className={ className } onClick={ toggle }>
-	// 	// 			{ this.selectUserType() }
-	// 	// 		</nav>
-	// 	// 	);
-	// 	// }
+	setContainerClass() {
+		return this.props.greeting ? 'modal greeting' : null;
+	}
+
+	componentWillUnmount() {
+		return this.props.greeting ? this.props.update('homepage', 'greeting') : null;
+	}
+
+	// navListFunction() {
+	// 	return this.props.greeting ? this.props.update('homepage', 'greeting'): null;
 	// }
-	toggle() {
-		this.props.greeting ? this.props.update('greeting') :
-		this.state.hidden ? this.setState({ 
-			hidden: false, 
-			navClass: 'main-menu'
-		}) : this.setState({
-			hidden: true,
-			navClass: 'main-menu hidden',
-		})
-	}
-	
+
 	render() {
-		const Navigation = () => {
-			const build = new QuickBuild;
-			const sitemap = 
-				this.props.user.type == 'driver' ? this.state.maps.driver : 
-				this.props.user.type == 'voter' ? this.state.maps.voter : 
-				null;
-			const user = this.props.user;
-			const greeting = this.props.greeting;
-
-			return (
-				<nav className={ this.state.navClass } onClick={ this.toggle }>
-					{ build.nav({sitemap, user, greeting}) }
-				</nav>
-			);
-		}
-
-		const Greeting = () => {
-			return this.props.greeting ? (
-				<div className='greeting headers'>
-					<h2>Hi, {this.props.user.name}!</h2>
-					<h3>What would you like to do?</h3>
-				</div>
-			) : null
-		}
-
-		const className = () => {
-			return this.props.greeting ? 'modal' : 'main-menu';
-		}
-
 		return (
-			<div className={ className() }>
-				<Greeting />
-				<Navigation />
+			<div className={ this.state.containerClass }>
+				<Greeting 
+					name = { this.props.user.name }
+					display= { this.props.greeting }
+				/>
+				<NavList 
+					greeting = { this.props.greeting }
+					sitemap = { this.state.maps[this.props.user.type] }
+					className = { this.state.navClass }
+				/>
 			</div>
 		);
 	}

@@ -8,6 +8,7 @@ header {
 	justify-content: space-between;
 	padding: 0.1vh;
 	z-index: 2;
+	position: relative;
 }
 
 .logo__img {

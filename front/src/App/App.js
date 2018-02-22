@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { Switch, BrowserRouter } from 'react-router-dom';
-import Header from './Header';
-import Home from '../Home/Home';
 import QuickBuild from '../QuickBuild';
+
+import Header from './Header';
+import MapWindow from '../Map/MapWindow';
+import Home from '../Home/Home';
+import Schedule from '../Schedule/Schedule';
+
 
 import './_App.css';
 
@@ -15,8 +19,11 @@ export default class App extends Component {
         'type': 'driver',
       },
       'homepage': {
-        'login': true,
-        'greeting': true,
+        'login': false,
+        'greeting': false,
+      },
+      'map': {
+        'blocked': true,
       }
     }
 
@@ -24,9 +31,9 @@ export default class App extends Component {
     // will want a function to check if already logged in and update login status before loading
   }
 
-  update(unmount, user) { 
+  update(page, unmount, user) { 
     let update = Object.assign({}, this.state);
-        update.homepage[unmount] = false;
+        update[page][unmount] = false;
         user ? update.user = user : null;
     this.setState(update);
   }
@@ -42,6 +49,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className='app'>
+          <MapWindow blocked={ this.state.map.blocked }/>
           <Header />
           <Switch>
             <PropsRoute exact path='/' 
@@ -49,6 +57,14 @@ export default class App extends Component {
               user = { this.state.user } 
               homepage = { this.state.homepage }
               update = { this.update }
+            />
+            <PropsRoute exact path='/schedule' 
+              component = { Schedule }
+              user = { this.state.user } 
+            />
+            <PropsRoute path='/schedule/:sub' 
+              component = { Schedule }
+              user = { this.state.user } 
             />
           </Switch>
         </div>

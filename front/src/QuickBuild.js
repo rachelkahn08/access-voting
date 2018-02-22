@@ -21,29 +21,39 @@ export default class QuickBuild {
 		)
 	}
 
-	link({component, greeting, linktext, to, ...rest}) {
-		const Text = greeting ? linktext : null;
-
+	link({href, ...rest}) {
 		return (
-			<NavLink to={ to } {...rest}>
-				{ Text }
+			<NavLink to={ href } {...rest}>
+				{ rest.text }
 			</NavLink>
 		);
 	}
 
-	nav({sitemap, ...rest}) {
-		const LinkButton = this.link;
+	nav(oldProps) {
 		let key = 0;
-		return sitemap.map((page) => {
-			return <LinkButton 
-				key={ key++ } 
-				className='navlink' 
-				component={ NavLink } 
-				to={ page.href } 
-				linktext={ page.text } 
-				{ ...rest } 
-			/>
+		const CustomLink = this.link;
+
+		let newProps = Object.assign({}, oldProps);
+			delete newProps.showText;
+			delete newProps.sitemap;
+
+		// console.log(props);
+
+		return oldProps.sitemap.map((page) => {
+			const text = oldProps.showText ? page.text : '';
+			return (
+				<NavLink
+					key={ key++ } 
+					to={ page.href } 
+					{ ...newProps }
+				>{ text }
+				</NavLink>
+			)
 		});
+	}
+
+	table({headers, rows, ...rest}) {
+		
 	}
 
 }
