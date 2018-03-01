@@ -4,6 +4,11 @@ export default class Greeting extends Component {
 	constructor(props) {
 		super(props);
 	}
+	
+	componentWillUnmount() {
+		return this.props.maskMap(false);
+	}
+
 
 	render() {
 		const Display = () => {

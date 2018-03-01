@@ -36,8 +36,18 @@ export default class Login extends Component {
 			<div className='modal login'>
 				<form className='login-form'>
 					<h2>Log In</h2>
-					<input type='text' name='username' value={this.state.username} placeholder='Username' onChange={this.inputChange.bind(this)}/>
-					<input type='text' name='password' value={this.state.password} placeholder='Password' onChange={this.inputChange.bind(this)}/>
+					<input type='text' 
+						name='username' 
+						value={this.state.username} 
+						placeholder='Username' 
+						onChange={this.inputChange.bind(this)}
+					/>
+					<input type='text' 
+						name='password' 
+						value={this.state.password} 
+						placeholder='Password' 
+						onChange={this.inputChange.bind(this)}
+					/>
 					<button onClick={this.sendLogin}>Submit</button>
 				</form>
 			</div>

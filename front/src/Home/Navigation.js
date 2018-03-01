@@ -42,18 +42,12 @@ export default class Navigation extends Component {
 					},
 				],
 			},
-			'navClass': this.setNavClass(),
 			'containerClass': this.setContainerClass(),
 		}
 
-		this.setNavClass = this.setNavClass.bind(this);
+		
 		this.setContainerClass = this.setContainerClass.bind(this);
 		
-	}
-
-	setNavClass() {
-		return this.props.greeting ? 
-			null : 'main-menu hidden';
 	}
 
 	setContainerClass() {
@@ -74,11 +68,11 @@ export default class Navigation extends Component {
 				<Greeting 
 					name = { this.props.user.name }
 					display= { this.props.greeting }
+					maskMap = { this.props.maskMap }
 				/>
 				<NavList 
 					greeting = { this.props.greeting }
 					sitemap = { this.state.maps[this.props.user.type] }
-					className = { this.state.navClass }
 				/>
 			</div>
 		);

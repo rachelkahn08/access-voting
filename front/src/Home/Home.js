@@ -26,6 +26,7 @@ export default class Home extends Component {
 				greeting={ this.props.homepage.greeting }
 				user={ this.props.user } 
 				update={ this.props.update } 
+				maskMap = { this.props.maskMap }
 			/>
 		);
 		// will need to return a registration page if false
@@ -33,7 +34,9 @@ export default class Home extends Component {
 		// check out node passport
 	}
 
-	
+	componentWillUnmount() {
+		return this.props.maskMap(false);
+	}
 
 	render() {
 		return this.getHomePage();

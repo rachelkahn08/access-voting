@@ -1,159 +1,70 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import QuickBuild from '../QuickBuild';
+import PropTypes from 'prop-types';
+
+import Greeting from './Greeting';
+
+import './_Navigation.css';
 
 export default class NavList extends Component {
-	constructor(props) {
-		super(props);
-		this.navProps = {
-			'closed': {
-				'left': '45px',
-				'bottom': '45px',
-				'transform': 'none',
-				'opacity': 0,
-			}, 
-			'open': [
-				
-			]
-		},
-		// this.hideMenu = this.hideMenu.bind(this);
-		// this.showMenu = this.showMenu.bind(this);
-		// this.toggleNav = this.toggleNav.bind(this);
-		this.generateNavList = this.generateNavList.bind(this);
-		this.toggleNav = this.toggleNav.bind(this);
-		this.showNav = this.showNav.bind(this);
-		this.hideNav = this.hideNav.bind(this);
+	state = {
+		open: false,
 	}
 
-	generateNavList() {
-		let propsObj = Object.assign({}, this.props);
-			propsObj.className = 'navlink';
-			propsObj.showText = propsObj.greeting;
+	generateNavList = () => {
+		const list = this.props.sitemap.map((page, i) => {
+			const text = this.props.greeting 
+				? page.text 
+				: '';
 
-			delete propsObj.greeting;
-
-		const build = new QuickBuild;
-		return build.nav(propsObj);
-	}
-
-	// componentDidUpdate() {
-	// 	const burger = document.getElementById('hamburger');
-	// 	burger.addEventListener('click', this.toggleNav);
-	// }
-
-	toggleNav(e) {
-		let nav = e.currentTarget.parentElement;
-
-		return nav.classList.contains('hidden') ? this.showNav(nav) : this.hideNav(nav);
-	}
-
-	showNav(nav) {
-		let bubbles = nav.children;
-
-		let animation = new window.TimelineMax;
-
-		animation.staggerTo(bubbles, 0.2, {
-			'display': 'none',
-		}, 0, 0);
-
-		animation.staggerFrom(bubbles, 0.2, {
-			
+			return (
+				<NavLink
+					to = { page.href }
+					style = { this.openStyles(i) }
+					className='navlink'
+				>
+					{ text }
+				</NavLink>
+			)
 		})
+
+		return list;		
 	}
 
-	hideNav(nav) {
-		let bubbles = nav.children;
-
-		// let animation = new window.TimelineMax;
-
-		// animation.staggerTo(bubbles, 0.2, {
-		// 	'display': 'none',
-		// }, 0, 0);
-
-		// animation.staggerFrom(bubbles, 0.2, {
-		// 	left: '45px',
-		// 	bottom: '45px',
-		// 	transform: 'none',
-		// 	opacity: 0,
-		// })
-		let testArr = [1, 2, 3];
-		console.log(typeof bubbles);
-		console.log(typeof testArr);
+	openStyles = i => {
+		const deg = i * -30;
+		const delay = this.state.open
+			? (this.props.sitemap.length - i) * 60
+			: i * 60;
+		const opacity = this.state.open 
+			? '1'
+			: '0';
+		const style = this.state.open
+			? `rotate(${deg}deg) translateX(100px)`
+			: `rotate(${deg}deg) translateX(0)`;
+		const click = this.state.open
+			? 'initial'
+			: 'none';
+		
+		return { transform: style, 
+			transitionDelay: `${delay}ms`,
+			opacity: opacity,
+			bottom: '45px',
+			left: '45px',
+			pointerEvents: click,
+		}
 	}
 
+	burgerStyles = () => {
 
-	// navList({...rest}) {
-		
-		
-	// 	// this.props.greeting ? (
-	// 	// 	propsObj.onClick = this.props.closeGreeting,
-	// 	// 	propsObj.showText = true
-	// 	// ) : (
-			
-	// 	// );
-				
-		
-	// }
+	}
 
-	// toggleNav(e) {
-		
-	// 	let parent = e.currentTarget.parentElement;
-
-	// 	const show = () => {
-	// 		return new Promise((resolve) => {
-	// 			const animation = this.showMenu();
-	// 			resolve(animation);
-	// 		}).then(
-	// 			parent.classList.remove('hidden')	
-	// 		);
-	// 	}
-
-	// 	const hide = () => {
-	// 		return new Promise((resolve) => {
-	// 			const animation = this.hideMenu();
-	// 			resolve(animation);
-	// 		}).then(
-	// 			parent.classList.add('hidden')	
-	// 		);
-	// 	}
-
-	// 	return this.state.hidden ? show() : hide();
-	// }
-
-	// showMenu() {
-	// 	let animation = new window.TimelineMax;
-	// 	// let bubbles = this.state.navList;
-	// 	console.log(this.state.navList);
-	// 	let bubbles = document.querySelectorAll('.navlink');
-
-	// 	const tweet = () => {
-	// 		console.log('twet');
-	// 	}
-
-	// 	animation.add( window.TweenMax.staggerTo(
-	// 		bubbles, 5, { 
-	// 			'display': 'flex',
-	// 			'opacity': 1 
-	// 		}, 5));
-
-	// 	animation.add( window.TweenMax.staggerFrom(bubbles, 5, {
-	// 			'opacity': 0,
-	// 			left: 0,
-	// 			bottom: 0,
-	// 			transform: 0,
-	// 		}, 5));
-
-	// }
-
-	// hideMenu() {
-	// 	console.log('hide');
-	// 	return new Promise(() => {
-
-	// 	})
-	// }
+	toggleNav = () => {
+		this.setState({open: !this.state.open});
+	}
 
 	render() {
-		console.log(this.unmount);
 		const Burger = () => {
 			return this.props.greeting ? null : (
 				<div 
@@ -164,11 +75,21 @@ export default class NavList extends Component {
 			);
 		}
 
+		const navClass = this.props.greeting
+			? null
+			: this.state.open 
+			? 'main-menu'
+			: 'main-menu hidden';
+
 		return (
-			<nav className = { this.props.className }>
+			<nav className = { navClass }>
 				<Burger />
 				{ this.generateNavList() }
 			</nav>
 		)
 	}
+}
+
+NavList.propTypes = {
+	bubbles: PropTypes.array
 }

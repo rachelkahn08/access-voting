@@ -70,6 +70,10 @@ export default class Schedule extends Component {
 		this.setState({'day': this.state.week[0]});
 	}
 
+	componentWillMount() {
+		return this.props.maskMap(false);
+	}
+
 	update(e) {
 		const id = e.target.parentElement.id;
 		const day = this.state.week[id];

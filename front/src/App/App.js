@@ -28,14 +28,20 @@ export default class App extends Component {
     }
 
     this.update = this.update.bind(this);
+    this.maskMap = this.maskMap.bind(this);
     // will want a function to check if already logged in and update login status before loading
   }
 
   update(page, unmount, user) { 
     let update = Object.assign({}, this.state);
         update[page][unmount] = false;
-        user ? update.user = user : null;
     this.setState(update);
+  }
+
+  maskMap(val) {
+    this.setState(() => {
+      return this.state.map.blocked = val;
+    })
   }
 
   render() {
@@ -57,14 +63,17 @@ export default class App extends Component {
               user = { this.state.user } 
               homepage = { this.state.homepage }
               update = { this.update }
+              maskMap = { this.maskMap }
             />
             <PropsRoute exact path='/schedule' 
               component = { Schedule }
               user = { this.state.user } 
+              maskMap = { this.maskMap }
             />
             <PropsRoute path='/schedule/:sub' 
               component = { Schedule }
               user = { this.state.user } 
+              maskMap = { this.maskMap }
             />
           </Switch>
         </div>

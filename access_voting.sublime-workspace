@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"generate",
+				"generateNavList"
+			],
+			[
+				"hide",
+				"hide"
+			],
+			[
+				"toggle",
+				"toggleNav"
+			],
+			[
+				"greetin",
+				"Greeting"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
 				"fetc",
 				"fetchScript"
 			],
@@ -238,10 +258,6 @@
 			[
 				"in",
 				"innerHTML"
-			],
-			[
-				"back",
-				"background-color"
 			],
 			[
 				"backgrou",
@@ -498,27 +514,90 @@
 			[
 				"small",
 				"smallDesktop"
-			],
-			[
-				"video",
-				"videoButtons"
-			],
-			[
-				"spa",
-				"space-between"
-			],
-			[
-				"align",
-				"align-items"
-			],
-			[
-				"Gal",
-				"GalleryItem"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "front/src/Home/NavList.js",
+			"settings":
+			{
+				"buffer_size": 1709,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/App/App.js",
+			"settings":
+			{
+				"buffer_size": 2113,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/Home/Home.js",
+			"settings":
+			{
+				"buffer_size": 974,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/Home/Greeting.js",
+			"settings":
+			{
+				"buffer_size": 451,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/Home/Navigation.js",
+			"settings":
+			{
+				"buffer_size": 1713,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/App/_App.css",
+			"settings":
+			{
+				"buffer_size": 639,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/QuickBuild.js",
+			"settings":
+			{
+				"buffer_size": 1033,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n\n\n\nimport React, { Component } from 'react';\n\n\nexport default class NavList extends Component {\n\tstate = {\n\t\tnavOpen: false,\n\t}\n\n\tgenerateStyles = i => {\n\n\t}\n\n\tgenerateNavList = () => {\n\t\tlet propsObj = Object.assign({}, this.props);\n\t\t\tpropsObj.className = 'navlink';\n\t\t\tpropsObj.showText = propsObj.greeting;\n\n\t\t\tdelete propsObj.greeting;\n\n\t\tconst build = new QuickBuild;\n\t\treturn build.nav(propsObj);\n\t}\n\n\ttoggleNav = e => {\n\t\tlet nav = e.currentTarget.parentElement;\n\n\t\treturn nav.classList.contains('hidden') ? this.showNav(nav) : this.hideNav(nav);\n\t}\n\n\tshowNav = nav => {\n\t\tnav.removeEventListener('click', this.toggle);\n\t\tlet bubbles = nav.children;\n\n\t\tfor (let i = 1; i < bubbles.length; i++) {\n\t\t\tlet time = 60 * ( i - 1 );\n\t\t\tconsole.log(time);\n\t\t\tlet styleObj = this.navProps.open[i - 1];\n\t\t\tlet bubble = bubbles[i];\n\t\t\t\n\t\t\tfor (let key in  styleObj ){\n\t\t\t\tlet val = styleObj[key];\n\n\t\t\t\twindow.setTimeout(() => {\n\t\t\t\t\tbubble.style[key] = val;\n\t\t\t\t}, time);\n\n\t\t\t\twindow.setTimeout(() => {\n\t\t\t\t\tbubble.style.opacity = 1;\n\t\t\t\t\tbubble.style.pointerEvents = 'initial';\n\t\t\t\t}, time/8);\n\t\t\t\t\n\t\t\t}\n\n\t\t\tif (i == bubbles.length - 1) {\n\t\t\t\tnav.classList.remove('hidden');\n\t\t\t\tnav.addEventListener('click', this.toggle);\n\t\t\t}\n\t\t}\n\t}\n\n\thideNav = nav => {\n\t\tnav.removeEventListener('click', this.toggle);\n\t\tlet bubbles = nav.children;\n\n\t\tfor (let i = bubbles.length - 1; i > 0; i--) {\n\t\t\tlet time = 60 * ( bubbles.length - 1 - i );\n\t\t\tlet styleObj = this.navProps.closed;\n\t\t\tlet bubble = bubbles[i];\n\t\t\tbubble.style.pointerEvents = 'none';\n\t\t\t\n\t\t\tfor (let key in  styleObj ){\n\t\t\t\tlet val = styleObj[key];\n\t\t\t\t\n\t\t\t\twindow.setTimeout(() => {\n\t\t\t\t\tbubble.style.opacity = 0;\n\t\t\t\t\tbubble.style[key] = val;\n\t\t\t\t}, time);\n\t\t\t}\n\n\t\t\tif (i == 1) {\n\t\t\t\tnav.classList.add('hidden');\n\t\t\t\twindow.setTimeout(() => {\n\t\t\t\t\tnav.addEventListener('click', this.toggle);\n\t\t\t\t}, time)\n\t\t\t}\n\t\t}\n\t}\n\n\t\n}\n\nimport React, { Component } from 'react';\nimport { Switch, BrowserRouter } from 'react-router-dom';\nimport QuickBuild from '../QuickBuild';\n\nimport Header from './Header';\nimport MapWindow from '../Map/MapWindow';\nimport Home from '../Home/Home';\nimport Schedule from '../Schedule/Schedule';\n\n\nimport './_App.css';\n\nexport default class App extends Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      'user': {\n        'name': 'Buddy',\n        'type': 'driver',\n      },\n      'homepage': {\n        'login': true,\n        'greeting': true,\n      },\n      'map': {\n        'blocked': true,\n      }\n    }\n\n    this.update = this.update.bind(this);\n    this.maskMap = this.maskMap.bind(this);\n    // will want a function to check if already logged in and update login status before loading\n  }\n\n  update(page, unmount, user) { \n    let update = Object.assign({}, this.state);\n        update[page][unmount] = false;\n    this.setState(update);\n  }\n\n  maskMap(val) {\n    this.setState(() => {\n      return this.state.map.blocked = val;\n    })\n  }\n\n  render() {\n\n    const PropsRoute = ({component, ...rest}) => {\n      let build = new QuickBuild;\n          build = build.route({component, ...rest});\n      return build;\n    }\n\n    return (\n      <BrowserRouter>\n        <div className='app'>\n          <MapWindow blocked={ this.state.map.blocked }/>\n          <Header />\n          <Switch>\n            <PropsRoute exact path='/' \n              component = { Home }\n              user = { this.state.user } \n              homepage = { this.state.homepage }\n              update = { this.update }\n              maskMap = { this.maskMap }\n            />\n            <PropsRoute exact path='/schedule' \n              component = { Schedule }\n              user = { this.state.user } \n              maskMap = { this.maskMap }\n            />\n            <PropsRoute path='/schedule/:sub' \n              component = { Schedule }\n              user = { this.state.user } \n              maskMap = { this.maskMap }\n            />\n          </Switch>\n        </div>\n      </BrowserRouter>\n    );\n  }\n}\n\n\nNavList.defaultProps = {\n\t// bubbles: generateNavList()\n}\n\nconsole.log(NavList.generateNavList);\n\n\n\n// this.navProps = {\n// \t\t\t'closed': {\n// \t\t\t\tleft: '45px',\n// \t\t\t\tbottom: '45px',\n// \t\t\t\ttransform: 'translate(0, 0) translateX(0)',\n// \t\t\t}, \n// \t\t\t// 'open': [\n// \t\t\t// \t{\n// \t\t\t// \t\tbottom: '200px',\n// \t\t\t// \t\tleft: '41px',\n// \t\t\t// \t\ttransform: 'translate(0%, 86.5%)',\t\n// \t\t\t// \t},{\n// \t\t\t// \t\tleft: '102px',\n// \t\t\t// \t\tbottom: '120.5px',\n// \t\t\t// \t\ttransform: 'translate(-21.5%, -60.5%)',\n// \t\t\t// \t},{\n// \t\t\t// \t\tleft: '106px',\n// \t\t\t// \t\tbottom: '124px',\n// \t\t\t// \t\ttransform: 'translate(62.5%, 21.5%)',\n// \t\t\t// \t},{\n// \t\t\t// \t\tleft: '196px',\n// \t\t\t// \t\tbottom: '67px',\n// \t\t\t// \t\ttransform: 'translate(-86.5%, 0%)',\n// \t\t\t// \t}\n// \t\t\t// ]\n// \t\t\t\t'open': this.generateStyles(),\n// \t\t\t}",
+			"settings":
+			{
+				"buffer_size": 4788,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/Home/_Navigation.css",
+			"settings":
+			{
+				"buffer_size": 1470,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -585,9 +664,31 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/public",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule"
 	],
 	"file_history":
 	[
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/Schedule.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Navigation.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Greeting.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/_Navigation.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Login.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/App.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/NavList.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/_DISCARD/DUMP2",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/_DISCARD/DUMP",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/QuickBuild.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/img/hamburger.svg",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/index.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/public/index.html",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/access_voting.sublime-project",
 		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/Babel/Babel.sublime-settings",
 		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/User/Package Control.user-ca-bundle",
@@ -597,20 +698,12 @@
 		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
 		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
-		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/_Navigation.css",
-		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/QuickBuild.js",
-		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Navigation.js",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/MapWindow.js",
-		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/App.js",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/LoadingMask.js",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/_MapWindow.css",
-		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/Schedule.js",
-		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Login.js",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/_Header.css",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/_App.css",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/_DISCARD/MapStuff.js",
-		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/public/index.html",
-		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/index.js",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/Calendar.js",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/GoogleApi.js",
 		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/Schedule.css",
@@ -709,17 +802,11 @@
 		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_with_kenneth/index.html",
 		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_with_kenneth/gulpfile.js",
 		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_with_kenneth/src/sass/index.scss",
-		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_with_kenneth/src/sass/reset.scss",
-		"/Users/Rachel/Desktop/CIRCUS/resources/homebrew-template/gulpfile.js",
-		"/Users/Rachel/Desktop/CIRCUS/resources/homebrew-template/package.json",
-		"/Users/Rachel/Desktop/CIRCUS/2017/summer-2017/react/react-final/package.json",
-		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_with_kenneth/package.json",
-		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_with_kenneth/.gitignore",
-		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/Smithsonian/src/js/main.js"
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_with_kenneth/src/sass/reset.scss"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -733,6 +820,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CLASSLIST",
+			"unmount",
+			"mask",
+			"display",
+			"none",
+			"display: none",
+			"opacity",
+			"unmount",
+			"togglenav",
+			"unmount",
+			"console.log",
+			"propsObj",
+			"navcl",
+			"componentwill'",
+			"setnavclass",
+			"navclass",
+			"display",
+			"console.log",
+			"hidden ? ",
+			"url",
+			"18,",
+			"18, "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -750,18 +859,288 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "front/src/Home/NavList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1709,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								567,
+								567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2430.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "front/src/App/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								539,
+								539
+							],
+							[
+								566,
+								566
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 185.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "front/src/Home/Home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								41,
+								41
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "front/src/Home/Greeting.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "front/src/Home/Navigation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								991,
+								991
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 655.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "front/src/App/_App.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 639,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "front/src/QuickBuild.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								772,
+								985
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 309.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4788,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1738,
+								1738
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "front/src/Home/_Navigation.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1167,
+								1167
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 834.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 29.0
 	},
 	"input":
 	{
-		"height": 39.0
+		"height": 41.0
 	},
 	"layout":
 	{
@@ -772,11 +1151,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.46063595478,
 			1.0
 		],
 		"rows":
@@ -798,7 +1184,7 @@
 	"project": "access_voting.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -840,7 +1226,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 267.0,
+	"side_bar_width": 203.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
