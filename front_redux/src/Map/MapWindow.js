@@ -31,8 +31,7 @@ export default class MapWindow extends Component {
 				'arrival_time': null,
 				'waypoints': null,
 			},
-			'loading': true,
-			'mapObj': null, 
+			'loading': true, 
 		}
 
 		this.getLocation = this.getLocation.bind(this);
@@ -75,11 +74,7 @@ export default class MapWindow extends Component {
 			}
 
 			navigator.geolocation.getCurrentPosition(success, fail);
-		});
-	}
-
-	sendDirectionRequest = (obj) => {
-
+		})
 	}
 
 	buildURL(location) {
@@ -104,29 +99,23 @@ export default class MapWindow extends Component {
 		return map;
 	}
 
-	goOnCall = () => {
-		return this.props.onCall
-			? <MapControls map={ this.state.map } />
-			: null;
-	}
-
 	componentDidMount() {
 		return this.getLocation().then((location) => {
 			return this.initMap(location.latlng)
-		}).then((map) => {
-			this.setState({'mapObj': map});
-			return map;
-		}).then((map) => {
-			console.dir(map);
-			console.dir(this.state.mapObj);
+		}).then(() => {
 			document.getElementById('map').style.position = 'absolute';
 			this.setState({'loading': false});
 		});
 	}
-	
-	// OPTIONAL: find nearby users
-	// select a user 
-	// get a route
+	getDirections() {
+
+	}
+
+	goOnCall = () => {
+		return this.props.onCall
+			? <MapControls />
+			: null;
+	}
 
 	render() {
 

@@ -1,0 +1,39 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #ababab;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  font-family: 'Helvetica Neue';
+  z-index: 1;
+}
+
+.modal {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-self: bottom;
+	align-items: center;
+	margin: 3vw;
+	margin-bottom: 0;
+	padding: 5vw;
+	background-color: #fefefe;
+	color: #454545;
+	height: 65vh;
+	z-index: 10;
+}
+
+.close-button {
+	height: 7vw;
+	width: 7vw;
+	margin: 5vw;
+	align-self: flex-end;
+	background-image: url(../img/close-button.svg);
+}

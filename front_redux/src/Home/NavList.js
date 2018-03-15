@@ -38,8 +38,7 @@ export default class NavList extends Component {
 	}
 
 	openStyles = i => {
-		const baseDeg = 150 / this.props.sitemap.length;
-		const deg = 15 - (i * baseDeg);
+		const deg = i * -30;
 		const delay = this.state.open
 			? (this.props.sitemap.length - i) * 60
 			: i * 60;
@@ -56,8 +55,8 @@ export default class NavList extends Component {
 		return { transform: style, 
 			transitionDelay: `${delay}ms`,
 			opacity: opacity,
-			bottom: '60px',
-			left: '60px',
+			bottom: '45px',
+			left: '45px',
 			pointerEvents: click,
 		}
 	}

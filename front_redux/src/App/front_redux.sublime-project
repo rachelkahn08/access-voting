@@ -1,0 +1,11 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front_redux/src"
+		}
+	],
+	"syntax_override": {
+		"\\.js$": ["Babel", "JavaScript (Babel)"]
+	}
+}

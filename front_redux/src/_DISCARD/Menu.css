@@ -1,0 +1,97 @@
+.modal {
+	background-color: blue;
+	align-self: bottom;
+	margin: 5vw;
+	padding: 5vw;
+	background-color: #fefefe;
+	color: #454545;
+	height: 70vh;
+}
+
+.modal.login, .modal.greeting, {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.main-menu {
+	position: fixed;
+	display: initial;
+	bottom: 50px;
+	left: 50px;
+	border-radius: 50%;
+	padding: 20px;
+	background-color: #121212;
+	transition: 0.2s;
+}
+
+.main-menu .navlink{
+	border-radius: 50%;
+	padding: 22.5px;
+	position: fixed;
+	background-color: #e4e4e4;
+}
+
+.main-menu .navlink:first-child {
+	bottom: 200px;
+	left: 41px;
+	transform: translate(0%, 86.5%);
+}
+
+.main-menu .navlink:last-child {
+	left: 196px;
+	bottom: 67px;
+	transform: translate(-86.5%, 0%);
+}
+
+.main-menu .navlink:nth-child(2) {
+	left: 102px;
+	bottom: 120.5px;
+	transform: translate(-21.5%, -60.5%);
+}
+
+.main-menu .navlink:nth-child(3) {
+	left: 106px;
+	bottom: 124px;
+	transform: translate(62.5%, 21.5%);
+}
+
+
+.main-menu.hidden {
+	bottom: 42.5px;
+	left: 42.5px;
+	padding: 30px;
+}
+
+.main-menu.hidden .navlink{
+	display: none;
+}
+
+@keyframes nav1 {
+	0% { 
+		display: initial; 
+		bottom: 50px;
+		left: 50px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

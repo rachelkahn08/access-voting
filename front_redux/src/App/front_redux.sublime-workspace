@@ -1,0 +1,968 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"unmoun",
+				"unmountGreeting"
+			],
+			[
+				"generate",
+				"generateNavList"
+			],
+			[
+				"hide",
+				"hide"
+			],
+			[
+				"toggle",
+				"toggleNav"
+			],
+			[
+				"greetin",
+				"Greeting"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"fetc",
+				"fetchScript"
+			],
+			[
+				"get",
+				"getLocation"
+			],
+			[
+				"googleA",
+				"GoogleApi"
+			],
+			[
+				"goo",
+				"GoogleApi"
+			],
+			[
+				"backgrond",
+				"background-image"
+			],
+			[
+				"align-",
+				"align-content"
+			],
+			[
+				"e",
+				"extends"
+			],
+			[
+				"day",
+				"days"
+			],
+			[
+				"Calend",
+				"CalendarNav"
+			],
+			[
+				"greeting",
+				"greeting"
+			],
+			[
+				"state",
+				"stateChanges"
+			],
+			[
+				"home",
+				"HomePage"
+			],
+			[
+				"props",
+				"propsObj"
+			],
+			[
+				"build",
+				"buildHomePage"
+			],
+			[
+				"clear",
+				"clearFunction"
+			],
+			[
+				"nav",
+				"nav"
+			],
+			[
+				"intera",
+				"interactionType"
+			],
+			[
+				"inteac",
+				"InteractionsContainer"
+			],
+			[
+				"user",
+				"usernameValue"
+			],
+			[
+				"username",
+				"usernameValue"
+			],
+			[
+				"pa",
+				"loaderPaused"
+			],
+			[
+				"to",
+				"totalResults"
+			],
+			[
+				"fil",
+				"filterDuplicates"
+			],
+			[
+				"new",
+				"newResults"
+			],
+			[
+				"categori",
+				"categorizeResults"
+			],
+			[
+				"types",
+				"typesOfPlaces"
+			],
+			[
+				"nearB",
+				"nearbyLocations"
+			],
+			[
+				"resul",
+				"resultType"
+			],
+			[
+				"nearby",
+				"nearbyLocations"
+			],
+			[
+				"near",
+				"nearbyLocations"
+			],
+			[
+				"ty",
+				"typesOfPlaces"
+			],
+			[
+				"laod",
+				"loaderAnimation"
+			],
+			[
+				"click",
+				"clickedIndex"
+			],
+			[
+				"curr",
+				"currentIndex"
+			],
+			[
+				"current",
+				"currentChild"
+			],
+			[
+				"curre",
+				"currentChild"
+			],
+			[
+				"hambur",
+				"hamburgerLinks"
+			],
+			[
+				"ham",
+				"hamburgerLinks"
+			],
+			[
+				"lowP",
+				"lowPriceFilter"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"transl",
+				"translateY"
+			],
+			[
+				"gall",
+				"galleryImages"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"trns",
+				"transform"
+			],
+			[
+				"backgorund",
+				"background-color"
+			],
+			[
+				"srt",
+				"sort"
+			],
+			[
+				"acti",
+				"activeFilters"
+			],
+			[
+				"high",
+				"highestPrice"
+			],
+			[
+				"sofas",
+				"allSofas"
+			],
+			[
+				"price",
+				"priceFilter"
+			],
+			[
+				"color",
+				"colorFilters"
+			],
+			[
+				"maet",
+				"materialFilters"
+			],
+			[
+				"materi",
+				"materialFilters"
+			],
+			[
+				"ma",
+				"materialFilters"
+			],
+			[
+				"remove",
+				"removeFilter"
+			],
+			[
+				"set",
+				"setAttribute"
+			],
+			[
+				"fi",
+				"activeFilters"
+			],
+			[
+				"pro",
+				"productList"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"backgrou",
+				"background-image"
+			],
+			[
+				"freue",
+				"frequency"
+			],
+			[
+				"number",
+				"numberOfSteps"
+			],
+			[
+				"upd",
+				"updatePlayer"
+			],
+			[
+				"all",
+				"allButtons"
+			],
+			[
+				"conn",
+				"connectToServer"
+			],
+			[
+				"search",
+				"Search"
+			],
+			[
+				"curent",
+				"currentPlayer"
+			],
+			[
+				"save",
+				"savePlayer"
+			],
+			[
+				"curen",
+				"currentPlayer"
+			],
+			[
+				"test",
+				"testForPlaying"
+			],
+			[
+				"tes",
+				"testForPlaying"
+			],
+			[
+				"local",
+				"localStorage"
+			],
+			[
+				"userame",
+				"userName"
+			],
+			[
+				"ut",
+				"utf8Data"
+			],
+			[
+				"update",
+				"updateIndexArray"
+			],
+			[
+				"id",
+				"idArray"
+			],
+			[
+				"mess",
+				"messageHistory"
+			],
+			[
+				"http",
+				"httpServer"
+			],
+			[
+				"web",
+				"websocketServer"
+			],
+			[
+				"pentatoni",
+				"pentatonic_minor"
+			],
+			[
+				"aud",
+				"audioCtx"
+			],
+			[
+				"num",
+				"numberOfBeats"
+			],
+			[
+				"colun",
+				"column"
+			],
+			[
+				"numb",
+				"numberOfOctaves"
+			],
+			[
+				"pentatonic",
+				"pentatonic_major"
+			],
+			[
+				"fre",
+				"frequencies"
+			],
+			[
+				"index",
+				"startingIndex"
+			],
+			[
+				"star",
+				"startingIndex"
+			],
+			[
+				"app",
+				"App"
+			],
+			[
+				"note",
+				"noteButton"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"coluns",
+				"columns"
+			],
+			[
+				"colu",
+				"columns"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"freq",
+				"frequency"
+			],
+			[
+				"Noise",
+				"NoiseSwitch"
+			],
+			[
+				"testNise",
+				"testNoiseDiv"
+			],
+			[
+				"start",
+				"startTone"
+			],
+			[
+				"conti",
+				"containerA"
+			],
+			[
+				"data",
+				"dataToSend"
+			],
+			[
+				"type",
+				"typeOfChange"
+			],
+			[
+				"cu",
+				"currentComparisonOption"
+			],
+			[
+				"l",
+				"largerPercent"
+			],
+			[
+				"larg",
+				"largerImgWidth"
+			],
+			[
+				"sma",
+				"smallerImgWidth"
+			],
+			[
+				"large",
+				"largerWidth"
+			],
+			[
+				"compare",
+				"compareImgSizes"
+			],
+			[
+				"sizer",
+				"sizeratorRight"
+			],
+			[
+				"sizera",
+				"sizeratorRight"
+			],
+			[
+				"right",
+				"rightImgSize"
+			],
+			[
+				"siz",
+				"sizeratorRight"
+			],
+			[
+				"secen",
+				"seven-of-12-columns"
+			],
+			[
+				"sierato",
+				"sizeratorOptions"
+			],
+			[
+				"sizerato",
+				"sizeratorOptions"
+			],
+			[
+				"sizerator",
+				"sizeratorModal"
+			],
+			[
+				"glow",
+				"glowAnimation"
+			],
+			[
+				"glob",
+				"globalObjects"
+			],
+			[
+				"glo",
+				"globalObjects"
+			],
+			[
+				"space-",
+				"space-around"
+			],
+			[
+				"col",
+				"column"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ta",
+				"tablet"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "App.js",
+			"settings":
+			{
+				"buffer_size": 3813,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Root.js",
+			"settings":
+			{
+				"buffer_size": 418,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front_redux/src/index.js",
+			"settings":
+			{
+				"buffer_size": 262,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: enable",
+		"selected_items":
+		[
+			[
+				"Package Control: enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"default",
+				"Preferences: Babel – Default"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"",
+				"HTML: Encode Special Characters"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front_redux/src",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front_redux/src/App"
+	],
+	"file_history":
+	[
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front_redux/src/App/front_redux.sublime-project",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/OnCall.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/MapWindow.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/Schedule.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Login.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/MapControls.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Greeting.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/NavList.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Navigation.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/Home.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/OnCall/OnCall.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/MercedesBenz/.gitignore",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/MercedesBenz/assets/sass/_header.scss",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/MercedesBenz/assets/sass/_hero.scss",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/MercedesBenz/test.html",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/MercedesBenz/assets/sass/_footer.scss",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/MercedesBenz/assets/sass/_sections.scss",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/_Navigation.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/App.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/_DISCARD/DUMP2",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/_DISCARD/DUMP",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/QuickBuild.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/img/hamburger.svg",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/index.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/public/index.html",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/access_voting.sublime-project",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/Babel/Babel.sublime-settings",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/User/Package Control.user-ca-bundle",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Cache/Default/Startup.cache",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Cache/YAML/YAML.sublime-syntax.cache",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Rachel/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/LoadingMask.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/_MapWindow.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/_Header.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/_App.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/_DISCARD/MapStuff.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/Calendar.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Map/GoogleApi.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/Schedule.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/CalNav.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/MapWindow",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/_MapWindow.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule/CalendarNav.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Calendar.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Offers.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Schedule.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home/_Home.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/DISCARD/Menu.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/_Index.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App/Navigation.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/NavUL.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Home.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/_Navigation.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Menu.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/NavLI.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Login.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Header.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Greeting.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Menu.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/AnimatedLinks.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/AppNav.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Interactions.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/StaticNav.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/OnCall.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/AppContainer.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Navigation.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/MainMenu.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/DriverNav.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/InteractionsContainer.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/LoginForm.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Login.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/VoterNav.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/LaunchModals.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Modals.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/App.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Header.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/Interactions.css",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front/src/MobileWarning.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/music_app/front/assets/js/main.js",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/music_app/front/src/scss/main.scss",
+		"/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/music_app/front/src/js/main.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/Rachel_Benz/assets/css/main.css",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_app/front/src/js/main.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/node_to-do-list/front/src/js/main.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/index.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/src/scss/index.scss",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/src/scss/_Keyframes.scss",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/src/scss/_Main.scss",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/src/scss/_Mixins.scss",
+		"/Users/Rachel/Desktop/hrm/package.json",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/gulpfile.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/src/scss/_Variables.scss",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/src/scss/_Reset.scss",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/daddys_doody/front/assets/css/main.css",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/dining.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/sofa.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/src/js/main.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/catalog.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/Smithsonian/gulpfile.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/MercedesBenz-master/gulpfile.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/MercedesBenz-master/package.json",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/package.json",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/gulpfile.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/cart.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/src/scss/main.scss",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/category.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/final.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/index.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/index2.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/living.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/payment.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/sofas.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/review.html",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/assets/css/main.css",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/ux/ikea/prototype/assets/img/plus_skinny_navy.svg",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_app/front/assets/js/main.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_app/back/index.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/spring-2017/frameworks/gulp-tut/package.json",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_app/front/package.json",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/pair-programming/music_app/front/gulpfile.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/websocket_practice/front/gulpfile.js",
+		"/Users/Rachel/Desktop/CIRCUS/2017/fall-2017/node-js/websocket_practice/back/package.json"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								538,
+								538
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Root.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								418,
+								418
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/Rachel/Desktop/final portfolio/stuff_im_sure_about/access voting/front_redux/src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "",
+	"project": "front_redux.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sass",
+				"node_modules/node-sass/src/libsass/include/sass.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 262.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

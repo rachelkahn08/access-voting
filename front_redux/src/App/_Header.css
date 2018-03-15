@@ -1,0 +1,28 @@
+header {
+	height: 5vh;
+	width: 100%;
+	background-color: #121212;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.1vh;
+	z-index: 2;
+	position: relative;
+}
+
+.logo__img {
+	height: 5.75vh;
+	width: 5.75vh;
+	background-size: cover;
+}
+
+.logo__copy {
+	color: #efefef;
+	font-size: 2vh;
+	font-weight: 100;
+	font-family: 'Helvetica Neue';
+	line-height: 2vh;
+	letter-spacing: 0.2vh;
+	margin-right: 1.5vh;
+}

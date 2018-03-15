@@ -1,0 +1,147 @@
+.modal.calendar {
+	background-color: white;
+	padding: 0;
+	text-transform: uppercase;
+	height: 75vh;
+}
+
+.modal.calendar h2 {
+	margin: 0;
+	font-weight: 400;
+	color: #ababab;
+	font-size: 2rem;
+}
+
+.scrollbox {
+	overflow-y: scroll;
+	width: stretch;
+}
+
+.overflow-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	min-height: min-content;
+	width: stretch;
+}
+
+.calendar.nav, .calendar.list {
+	color: #ababab;
+	font-weight: 100;
+	box-sizing: border-box;
+	width: stretch;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	position: relative;
+	margin: 2.5vw;
+	border-top: 1px solid #ababab;
+}
+
+.calendar.nav, .calendar.list h2 {
+	background-color: #ababab;
+	font-size: 1.25rem;
+}
+
+.calendar.list {
+	border: 1px solid #ababab;
+	flex-direction: column;
+	justify-content: flex-start;
+	overflow-y: scroll;
+	margin-bottom: 0.5vh;
+}
+
+.calendar.list h2 {
+	color: white;
+	width: stretch;
+	font-weight: 300;
+	padding: 2vw;
+}
+
+.timeslots.list {
+	display: flex;
+	flex-direction: column;
+	width: stretch;
+}
+
+.timeslots.slot {
+	display: flex;
+	flex-direction: row;
+	width: stretch;
+	font-size: 0.75rem;
+	border-bottom: 1px solid #ababab;
+	height: 8vh;
+}
+
+.timeslots.slot .hour {
+	padding: 2.5vw;
+	border-right: 1px solid #ababab;
+	display: flex;
+	align-items: center;
+}
+
+.timeslots.slot .events {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: stretch;
+	text-align: left;
+}
+
+.top, .bottom {
+	display: flex;
+	align-items: center;
+	padding: 1vw;
+	padding-left: 2.5vw;
+	height: 4vh;
+}
+
+.bottom {
+	border-top: 1px solid #ababab;
+}
+
+.calendar.list, .date {
+	background-color: white;
+}
+
+.calendar.nav .cell {
+	display: flex;
+	flex-direction: column;
+	width: stretch;
+}
+
+.day, .date {
+	border: 1px solid #ababab;
+	border-left: none;
+	border-top: none;
+	letter-spacing: 0.07rem;
+}
+
+.day {
+	font-size: 0.5rem;
+	color: white;
+	padding: 2vw 1vw;
+	border-bottom: none;
+	border-right-color: white;
+}
+
+
+.date {
+	padding: 4vw 0vw;
+	height: 2.5vh;
+}
+
+.date.active {
+	font-weight: 500;
+}
+
+.cell:first-child .day, .cell:first-child .date {
+	border-left: 1px solid #ababab;
+}
+
+.cell:last-child .day {
+	border-right-color: #ababab;
+}

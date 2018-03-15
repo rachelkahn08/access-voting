@@ -52,8 +52,8 @@
 }
 
 .hamburger {
-	bottom: 60px;
-	left: 60px;
+	bottom: 50px;
+	left: 50px;
 	position: absolute;
 	border-radius: 50%;
 	padding: 20px;
@@ -79,7 +79,7 @@
 
 .main-menu.hidden .hamburger {
 	padding: 30px;
-	bottom: 52.5px;
-	left: 52.5px;
+	bottom: 42.5px;
+	left: 42.5px;
 	background-image: url(../img/hamburger.svg);
 }
