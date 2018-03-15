@@ -18,11 +18,11 @@ export default class App extends Component {
         'type': 'driver',
       },
       'homepage': {
-        'login': true,
-        'greeting': true,
+        'login': false,
+        'greeting': false,
       },
       'mapClickable': false,
-      'onCall': false,
+      'onCall': true,
     }
     // will want a function to check if already logged in and update login status before loading
 

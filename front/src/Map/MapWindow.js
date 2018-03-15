@@ -36,10 +36,8 @@ export default class MapWindow extends Component {
 		}
 
 		this.getLocation = this.getLocation.bind(this);
-		// thsis.setType = this.setType.bind(this);
 		this.mapSetup = this.mapSetup.bind(this);
 		this.buildURL = this.buildURL.bind(this);
-		// this.unmountLoading = this.unmountLoading.bind(this);
 	}
 
 	mapSetup() {
